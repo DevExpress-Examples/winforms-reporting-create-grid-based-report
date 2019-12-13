@@ -35,6 +35,7 @@ namespace dxKB17175 {
         }
 
         private void simpleButton1_Click(object sender, EventArgs e) {
+            //https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.ReportGeneration.ReportGenerator
             XtraReport1 report = new XtraReport1(checkEdit1.Checked ? FillDatasetFromGrid() : nwindDataSet, gridView1);
             ReportDesignTool designTool = new ReportDesignTool(report);
             designTool.ShowDesignerDialog();
