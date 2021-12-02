@@ -1,3 +1,7 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E108)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Reporting for WinForms - Create a Report from the DevExpress GridControl 
 
 This example creates a report that mimics the [GridControl](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl) data display, invokes the report preview, and loads the report in the Report Designer. Two ribbon pages are related to different ways to create a report.
