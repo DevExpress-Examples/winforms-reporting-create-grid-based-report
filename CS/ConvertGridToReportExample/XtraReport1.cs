@@ -51,8 +51,8 @@ namespace ConvertGridToReportExample
         public void InitTables(ArrayList columns)
         {
             int colCount = columns.Count;
-            int pagewidth = (PageWidth - (Margins.Left + Margins.Right));
-            int colWidth = pagewidth / colCount;
+            float usefulPageWidth = (PageWidth - (Margins.Left + Margins.Right));
+            float colWidth = usefulPageWidth / colCount;
 
             XRTable table = new XRTable();
             XRTableRow row = new XRTableRow();
@@ -62,21 +62,21 @@ namespace ConvertGridToReportExample
             for (int i = 0; i < colCount; i++)
             {
                 XRTableCell cell = new XRTableCell();
-                cell.Width = (int)colWidth;
+                cell.WidthF = colWidth;
                 cell.Text = columns[i].ToString();
                 row.Cells.Add(cell);
 
                 XRTableCell cell2 = new XRTableCell();
-                cell2.Width = (int)colWidth;
+                cell2.WidthF = colWidth;
                 cell2.ExpressionBindings.Add(new ExpressionBinding("Text", columns[i].ToString()));
                 row2.Cells.Add(cell2);
             }
             table.Rows.Add(row);
-            table.Width = pagewidth;
+            table.WidthF = usefulPageWidth;
             table.Borders = BorderSide.Bottom;
 
             table2.Rows.Add(row2);
-            table2.Width = pagewidth;
+            table2.WidthF = usefulPageWidth;
 
             Bands[BandKind.PageHeader].Controls.Add(table);
             Bands[BandKind.Detail].Controls.Add(table2);

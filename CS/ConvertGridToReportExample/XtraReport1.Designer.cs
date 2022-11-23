@@ -60,7 +60,7 @@ namespace ConvertGridToReportExample
             this.BottomMargin,
             this.Detail,
             this.PageHeader});
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
             this.Version = "21.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

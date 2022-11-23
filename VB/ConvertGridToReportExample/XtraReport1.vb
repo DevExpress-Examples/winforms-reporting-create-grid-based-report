@@ -49,9 +49,8 @@ Namespace ConvertGridToReportExample
 		End Sub
 		Public Sub InitTables(ByVal columns As ArrayList)
 			Dim colCount As Integer = columns.Count
-'INSTANT VB NOTE: The variable pagewidth was renamed since Visual Basic does not handle local variables named the same as class members well:
-			Dim pagewidth_Renamed As Integer = (PageWidth - (Margins.Left + Margins.Right))
-			Dim colWidth As Integer = pagewidth_Renamed \ colCount
+			Dim usefulPageWidth As Single = (PageWidth - (Margins.Left + Margins.Right))
+			Dim colWidth As Single = usefulPageWidth \ colCount
 
 			Dim table As New XRTable()
 			Dim row As New XRTableRow()
@@ -60,21 +59,21 @@ Namespace ConvertGridToReportExample
 
 			For i As Integer = 0 To colCount - 1
 				Dim cell As New XRTableCell()
-				cell.Width = CInt(colWidth)
+				cell.WidthF = colWidth
 				cell.Text = columns(i).ToString()
 				row.Cells.Add(cell)
 
 				Dim cell2 As New XRTableCell()
-				cell2.Width = CInt(colWidth)
+				cell2.WidthF = colWidth
 				cell2.ExpressionBindings.Add(New ExpressionBinding("Text", columns(i).ToString()))
 				row2.Cells.Add(cell2)
 			Next i
 			table.Rows.Add(row)
-			table.Width = pagewidth_Renamed
+			table.WidthF = usefulPageWidth
 			table.Borders = BorderSide.Bottom
 
 			table2.Rows.Add(row2)
-			table2.Width = pagewidth_Renamed
+			table2.WidthF = usefulPageWidth
 
 			Bands(BandKind.PageHeader).Controls.Add(table)
 			Bands(BandKind.Detail).Controls.Add(table2)

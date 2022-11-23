@@ -50,7 +50,7 @@
 			' XtraReport1
 			' 
 			Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.TopMargin, Me.BottomMargin, Me.Detail, Me.PageHeader})
-			Me.Font = New System.Drawing.Font("Tahoma", 9.75F)
+			Me.Font = New DevExpress.Drawing.DXFont("Tahoma", 9.75F)
 			Me.Version = "21.2"
 			DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
