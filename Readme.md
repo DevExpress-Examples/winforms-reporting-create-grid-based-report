@@ -18,7 +18,7 @@ The data source is the SQLite database with Northwind data.
 
 ## DataTable Method
 
-The [GridView.GetVisibleRowHandle](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Grid.GridView.GetVisibleRowHandle(System.Int32)) method is used to get visible data rows. A [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable) is created and passed to the report constructor in the code-behind file. The report constructor uses the GridView to create a report layout at runtime. The grid column captions compose the [XRTable](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable) structure. Grouped columns in the grid produce  the [GroupHeaderBand](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.GroupHeaderBand) in the report.
+The [GridView.GetVisibleRowHandle](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Grid.GridView.GetVisibleRowHandle(System.Int32)) method is used to get visible data rows. A [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable) is created and passed to the report constructor in the code-behind file. The report constructor uses the GridView to create a report layout at runtime. The grid column captions compose the [XRTable](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable) structure. Grouped columns in the grid produce the [GroupHeaderBand](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.GroupHeaderBand) in the report.
 
 ## ReportGenerator Method 
 
